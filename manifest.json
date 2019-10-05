@@ -1,0 +1,14 @@
+{
+  "name": "Distraction-Free YouTube",
+  "version": "0.2",
+  "description": "Block out all distractions on YouTube.",
+  "manifest_version": 2,
+  "permissions": [  ],
+  "content_scripts": [
+    {
+      "matches": [ "*://*.youtube.com/*" ],
+      "js": [ "background.js" ],
+      "run_at": "document_start"
+    }
+  ]
+}
