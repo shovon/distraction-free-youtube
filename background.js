@@ -1,6 +1,13 @@
+const hide = (el) => {
+  if (el) {
+    el.hidden = true;
+  }
+}
+
 window.addEventListener('DOMContentLoaded', function () {
   setInterval(() => {
-    document.querySelector('#feed, ytd-browse[page-subtype=home]').hidden = true;
-    document.querySelector('#related').hidden = true;
+    hide(document.querySelectorAll('ytd-watch-next-secondary-results-renderer'))
+    hide(document.querySelector('#feed, ytd-browse[page-subtype=home]'))
+    hide(document.querySelector('#related'));
   }, 32);
 });
